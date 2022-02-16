@@ -18,7 +18,7 @@ Automatic (1 / day) web crawler which checks some sections of ulany.sk and saves
 - https://ulany.sk/?page=zasadnutia - contains date but not when it was added
 - https://ulany.sk/?page=verejne-obstaravanie - summary by Q, Offers again no dates
 - https://ulany.sk/?page=oznamy - no dates, some files contains timestamp, different formats
-- *https://ulany.sk/?page=udalosti - no events right now so i can't figure out hpw it looks
+- https://ulany.sk/?page=udalosti - no events right now so i can't figure out how it looks
 - https://ulany.sk/?page=hlasenie - contains date, it looks there is a consistency in the format
 - https://ulany.sk/?page=rozpocet - DOCS, low priority
 - https://ulany.sk/?page=zmluvy - DOCS, too much work / info
