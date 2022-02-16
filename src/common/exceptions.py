@@ -1,0 +1,2 @@
+class UlanovinyException(Exception):
+    pass
