@@ -26,10 +26,10 @@ class NewsletterPlugin(BasePlugin):
                     soup = bs4.BeautifulSoup(response.content, 'html.parser')
 
                     elements = soup.select('#content-left a')
-                    LOGGER.info('{} newsletter have been found'.format(len(elements)))
+                    LOGGER.info('{} newsletters have been found'.format(len(elements)))
 
                     if len(elements) == 0:
-                        LOGGER.info('Done, no more newsletter')
+                        LOGGER.info('Done, no more newsletters')
                         return
 
                     for element in reversed(elements):
