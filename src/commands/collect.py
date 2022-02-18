@@ -2,6 +2,7 @@ import click
 from common.logger import LOGGER
 from plugin.meeting import MeetingPlugin
 from plugin.announcement import AnnouncementPlugin
+from plugin.newsletter import NewsletterPlugin
 
 
 @click.command()
@@ -11,6 +12,7 @@ def cli():
     try:
         MeetingPlugin().run()
         AnnouncementPlugin().run()
+        NewsletterPlugin().run()
     except:
         return_code = 1
 
