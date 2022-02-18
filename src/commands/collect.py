@@ -1,6 +1,7 @@
 import click
 from common.logger import LOGGER
 from plugin.meeting import MeetingPlugin
+from plugin.announcement import AnnouncementPlugin
 
 
 @click.command()
@@ -9,6 +10,7 @@ def cli():
     LOGGER.info('Start')
     try:
         MeetingPlugin().run()
+        AnnouncementPlugin().run()
     except:
         return_code = 1
 
