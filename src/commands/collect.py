@@ -5,20 +5,20 @@ from plugin.announcement import AnnouncementPlugin
 from plugin.newsletter import NewsletterPlugin
 from plugin.budget import BudgetPlugin
 from plugin.procurement import ProcurementPlugin
+from plugin.report import ReportPlugin
 
 
 @click.command()
 def cli():
     return_code = 0
     LOGGER.info('Start')
-    try:
-        MeetingPlugin().run()
-        AnnouncementPlugin().run()
-        NewsletterPlugin().run()
-        BudgetPlugin().run()
-        ProcurementPlugin().run()
-    except:
-        return_code = 1
+
+    MeetingPlugin().run()
+    AnnouncementPlugin().run()
+    NewsletterPlugin().run()
+    BudgetPlugin().run()
+    ProcurementPlugin().run()
+    ReportPlugin().run()
 
     LOGGER.info('Done')
     return return_code

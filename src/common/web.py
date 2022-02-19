@@ -7,3 +7,4 @@ class Category(Enum):
     NEWSLETTER = 'obecne-noviny'
     BUDGET = 'rozpocet'
     PROCUREMENT = 'verejne-obstaravanie'
+    REPORT = 'hlasenie'

@@ -1,5 +1,3 @@
-import re
-
 import bs4
 import requests.exceptions
 
