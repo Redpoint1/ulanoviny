@@ -38,7 +38,7 @@ class BudgetPlugin(BasePlugin):
                         href = element['href']
                         title = element.text
 
-                        if not re.search('\d', title):
+                        if not re.search(r'\d', title):
                             sufix = element.findPreviousSibling('h2').text
                             title = f'{title} {sufix}'
 
