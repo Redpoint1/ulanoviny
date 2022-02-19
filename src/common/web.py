@@ -6,3 +6,4 @@ class Category(Enum):
     ANNOUNCEMENT = 'oznamy'
     NEWSLETTER = 'obecne-noviny'
     BUDGET = 'rozpocet'
+    PROCUREMENT = 'verejne-obstaravanie'

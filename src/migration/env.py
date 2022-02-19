@@ -10,7 +10,7 @@ from sqlalchemy import pool
 from alembic import context
 
 sys.path.insert(0, dirname(dirname(abspath(__file__))))
-from shared.db.models import Base, meeting, announcement, newsletter, budget
+from shared.db.models import Base, meeting, announcement, newsletter, budget, procurement
 
 # this is the Alembic Config object, which provides
 # access to the values within the .ini file in use.
@@ -25,6 +25,7 @@ fileConfig(config.config_file_name)
 # from myapp import mymodel
 # target_metadata = mymodel.Base.metadata
 target_metadata = Base.metadata
+
 
 # other values from the config, defined by the needs of env.py,
 # can be acquired:

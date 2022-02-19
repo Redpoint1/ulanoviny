@@ -4,6 +4,7 @@ from plugin.meeting import MeetingPlugin
 from plugin.announcement import AnnouncementPlugin
 from plugin.newsletter import NewsletterPlugin
 from plugin.budget import BudgetPlugin
+from plugin.procurement import ProcurementPlugin
 
 
 @click.command()
@@ -15,6 +16,7 @@ def cli():
         AnnouncementPlugin().run()
         NewsletterPlugin().run()
         BudgetPlugin().run()
+        ProcurementPlugin().run()
     except:
         return_code = 1
 
