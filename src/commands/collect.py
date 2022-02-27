@@ -9,6 +9,7 @@ from plugin.report import ReportPlugin
 from plugin.order import OrderPlugin
 from plugin.invoice import InvoicePlugin
 from plugin.contract import ContractPlugin
+from plugin.table import TablePlugin
 
 
 @click.command()
@@ -25,6 +26,7 @@ def cli():
     OrderPlugin().run()
     InvoicePlugin().run()
     ContractPlugin().run()
+    TablePlugin().run()
 
     LOGGER.info('Done')
     return return_code

@@ -11,3 +11,4 @@ class Category(Enum):
     ORDER = 'objednavky'
     INVOICE = 'faktury'
     CONTRACT = 'zmluvy'
+    TABLE = 'dokumenty-uradna-tabula'
