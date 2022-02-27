@@ -12,3 +12,4 @@ class Category(Enum):
     INVOICE = 'faktury'
     CONTRACT = 'zmluvy'
     TABLE = 'dokumenty-uradna-tabula'
+    RESOLUTION = 'dokumenty-uznesenia'
