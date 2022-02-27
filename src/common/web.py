@@ -8,3 +8,4 @@ class Category(Enum):
     BUDGET = 'rozpocet'
     PROCUREMENT = 'verejne-obstaravanie'
     REPORT = 'hlasenie'
+    ORDER = 'objednavky'
