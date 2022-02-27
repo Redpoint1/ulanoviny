@@ -11,6 +11,7 @@ from plugin.invoice import InvoicePlugin
 from plugin.contract import ContractPlugin
 from plugin.table import TablePlugin
 from plugin.resolution import ResolutionPlugin
+from plugin.transcript import TranscriptPlugin
 
 
 @click.command()
@@ -29,6 +30,7 @@ def cli():
     ContractPlugin().run()
     TablePlugin().run()
     ResolutionPlugin().run()
+    TranscriptPlugin().run()
 
     LOGGER.info('Done')
     return return_code

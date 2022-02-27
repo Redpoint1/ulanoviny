@@ -13,3 +13,4 @@ class Category(Enum):
     CONTRACT = 'zmluvy'
     TABLE = 'dokumenty-uradna-tabula'
     RESOLUTION = 'dokumenty-uznesenia'
+    TRANSCRIPT = 'dokumenty-zapisnice'
