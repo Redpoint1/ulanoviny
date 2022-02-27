@@ -12,6 +12,7 @@ from plugin.contract import ContractPlugin
 from plugin.table import TablePlugin
 from plugin.resolution import ResolutionPlugin
 from plugin.transcript import TranscriptPlugin
+from plugin.vzn import VZNPlugin
 
 
 @click.command()
@@ -31,6 +32,7 @@ def cli():
     TablePlugin().run()
     ResolutionPlugin().run()
     TranscriptPlugin().run()
+    VZNPlugin().run()
 
     LOGGER.info('Done')
     return return_code

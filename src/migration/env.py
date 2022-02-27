@@ -11,7 +11,7 @@ from alembic import context
 
 sys.path.insert(0, dirname(dirname(abspath(__file__))))
 from shared.db.models import Base, meeting, announcement, newsletter, budget, procurement, report, order, invoice,\
-    contract, table, resolution, transcript
+    contract, table, resolution, transcript, vzn
 
 # this is the Alembic Config object, which provides
 # access to the values within the .ini file in use.

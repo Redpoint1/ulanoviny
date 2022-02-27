@@ -14,3 +14,4 @@ class Category(Enum):
     TABLE = 'dokumenty-uradna-tabula'
     RESOLUTION = 'dokumenty-uznesenia'
     TRANSCRIPT = 'dokumenty-zapisnice'
+    VZN = 'dokumenty-vzn'
