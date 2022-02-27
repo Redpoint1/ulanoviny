@@ -9,3 +9,4 @@ class Category(Enum):
     PROCUREMENT = 'verejne-obstaravanie'
     REPORT = 'hlasenie'
     ORDER = 'objednavky'
+    INVOICE = 'faktury'

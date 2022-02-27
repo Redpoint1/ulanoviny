@@ -7,6 +7,7 @@ from plugin.budget import BudgetPlugin
 from plugin.procurement import ProcurementPlugin
 from plugin.report import ReportPlugin
 from plugin.order import OrderPlugin
+from plugin.invoice import InvoicePlugin
 
 
 @click.command()
@@ -21,6 +22,7 @@ def cli():
     ProcurementPlugin().run()
     ReportPlugin().run()
     OrderPlugin().run()
+    InvoicePlugin().run()
 
     LOGGER.info('Done')
     return return_code
