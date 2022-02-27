@@ -39,7 +39,7 @@ class ContractPlugin(BasePlugin):
 
                         for element in elements:
                             published, title, _, _, _, _, document = element.findChildren('td')
-                            url = document.findChild('a').attrs.get('href')
+                            link = document.findChild('a').attrs.get('href')
                             size_in_mb = re.search(r'([0-9\.]+)', document.text).groups()[0]
                             is_pdf = re.search(r'\.pdf$', url)
                             if is_pdf:
@@ -47,7 +47,7 @@ class ContractPlugin(BasePlugin):
                                     Contract,
                                     published=datetime.date.fromisoformat(published.text),
                                     title=title.text,
-                                    url=url,
+                                    url=link,
                                     size_in_mb=size_in_mb
                                 )
                                 if not created:

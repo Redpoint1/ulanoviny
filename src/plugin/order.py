@@ -39,13 +39,13 @@ class OrderPlugin(BasePlugin):
 
                         for element in elements:
                             published, _, title, _, _, _, _, document = element.findChildren('td')
-                            url = document.findChild('a').attrs.get('href')
+                            link = document.findChild('a').attrs.get('href')
                             size_in_mb = re.search(r'([0-9\.]+)', document.text).groups()[0]
                             model, created = session.get_or_create(
                                 Order,
                                 published=datetime.date.fromisoformat(published.text),
                                 title=title.text,
-                                url=url,
+                                url=link,
                                 size_in_mb=size_in_mb
                             )
                             if not created:
