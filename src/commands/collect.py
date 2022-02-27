@@ -8,6 +8,7 @@ from plugin.procurement import ProcurementPlugin
 from plugin.report import ReportPlugin
 from plugin.order import OrderPlugin
 from plugin.invoice import InvoicePlugin
+from plugin.contract import ContractPlugin
 
 
 @click.command()
@@ -23,6 +24,7 @@ def cli():
     ReportPlugin().run()
     OrderPlugin().run()
     InvoicePlugin().run()
+    ContractPlugin().run()
 
     LOGGER.info('Done')
     return return_code

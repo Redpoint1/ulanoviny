@@ -10,3 +10,4 @@ class Category(Enum):
     REPORT = 'hlasenie'
     ORDER = 'objednavky'
     INVOICE = 'faktury'
+    CONTRACT = 'zmluvy'
