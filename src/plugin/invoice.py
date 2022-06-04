@@ -41,7 +41,7 @@ class InvoicePlugin(BasePlugin):
                             published, _, title, _, _, _, document = element.findChildren('td')
                             link = document.findChild('a').attrs.get('href')
                             size_in_mb = re.search(r'([0-9\.]+)', document.text).groups()[0]
-                            is_pdf = re.search(r'\.pdf$', url)
+                            is_pdf = re.search(r'\.pdf$', link)
                             if is_pdf:
                                 model, created = session.get_or_create(
                                     Invoice,

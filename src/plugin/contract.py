@@ -38,10 +38,10 @@ class ContractPlugin(BasePlugin):
                             return
 
                         for element in elements:
-                            published, title, _, _, _, _, document = element.findChildren('td')
+                            number, published, title, _, _, _, _, document = element.findChildren('td')
                             link = document.findChild('a').attrs.get('href')
                             size_in_mb = re.search(r'([0-9\.]+)', document.text).groups()[0]
-                            is_pdf = re.search(r'\.pdf$', url)
+                            is_pdf = re.search(r'\.pdf$', link)
                             if is_pdf:
                                 model, created = session.get_or_create(
                                     Contract,
@@ -51,7 +51,7 @@ class ContractPlugin(BasePlugin):
                                     size_in_mb=size_in_mb
                                 )
                                 if not created:
-                                    LOGGER.info(f'Contract {model.url} ...skipped (duplicate)')
+                                    LOGGER.info(f'Contract {link} ...skipped (duplicate)')
                                     loop = False
                                 else:
                                     LOGGER.info(f'{model.url} ...added')
